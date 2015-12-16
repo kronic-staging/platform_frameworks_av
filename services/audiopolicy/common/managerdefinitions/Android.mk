@@ -38,6 +38,9 @@ ifeq ($(call is-vendor-board-platform,QCOM),true)
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_EXTN_FORMATS)),true)
 LOCAL_CFLAGS     += -DAUDIO_EXTN_FORMATS_ENABLED
 endif
+ifneq ($(strip $(AUDIO_FEATURE_ENABLED_PROXY_DEVICE)),false)
+LOCAL_CFLAGS     += -DAUDIO_EXTN_AFE_PROXY_ENABLED
+endif
 endif
 ifeq ($(USE_XML_AUDIO_POLICY_CONF), 1)
 
