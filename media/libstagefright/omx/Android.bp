@@ -89,6 +89,14 @@ cc_library_shared {
             cfi: true,
         },
     },
+
+     product_variables: {
+        aosip: {
+            qcom_bsp_legacy: {
+                cflags: ["-DQCOM_BSP_LEGACY"],
+            },
+        },
+    },
 }
 
 cc_library_shared {
